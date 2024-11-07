@@ -4,10 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <nav><a href="/exercises/web_html/table.html">Tabla</a></nav>
+
+    <div class="navbar">
+        <a href="http://127.0.0.1:5500/">Índice</a>
+        <a href="/exercises/web_html/info.html">Información</a>
+        <a href="/exercises/web_html/table.html">Tabla</a>
+        
+    </div>
+
+    <style>
+       
+        body {
+            font-family: Arial;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: red;
+        }
+
+
+
+    </style>
 </head>
 <body>
-    <h1>Hello World!!!</h1>
+    <h1>Formulario de garantía</h1>
+
+
+    <form>
+        <label for="user_name">Introduzca su nombre: </label> <input type="text" placeholder="Nombre" name="user_name">
+        <br />
+        <label for="user_surname">Introduzca su apellido: </label> <input type="text" placeholder="Apellido" name="user_surname">
+        <br />
+        <label for="user_areacode">Introduzca su número de teléfono: </label> <input style="width: 50px;" type="number" placeholder="Prefijo" name="user_areacode">
+        <label for="user_number"></label> <input style="width: 200px;" type="tel" placeholder="Número de teléfono" name="user_number">
+        <br />
+        <label for="user_order">Introduzca su número de pedido: </label> <input type="text" placeholder="XXX-XXX-XXX-XXX" name="user_order">
+        <br />
+        <label for="descripción">Explique brevemente su problema: </label><textarea placeholder="Breve descripción de su problema" name="descripción"></textarea>
+        <br />
+        <label for="descripción">¿Ha recibido el producto?</label>
+        <input type="radio" name="descripción" value="">Sí
+        <input type="radio" name="descripción" value="">No
+        <br />
+        <label for="option">Seleccione uno de los siguientes: </label> <select name="option">
+            <option value="">Seleccionar</option>
+            <option value="Dañado">El producto ha llegado dañado</option>
+            <option value="No funciona">El producto no funciona</option>
+            <option value="No se adecua">El producto no se adecua a la descripción</option>
+
+        </select>
+
+
+        <br />
+        <br />
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+        
+    
+    </form>
+
     
 </body>
 </html>
